@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Jost:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    @apply font-jost text-[1rem];
+}
+h1 {
+    @apply text-[3rem];
+}
+button {
+  outline: none;  
+}
+
+[class ^= "swiper-button-"] {
+    color: black;
+}
