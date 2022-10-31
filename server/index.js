@@ -8,18 +8,14 @@ const flw = new Flutterwave(
 	process.env.FLW_SECRET_KEY
 );
 
-app.use(function (req, res, next) {
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header(
-		'Access-Control-Allow-Headers',
-		'Origin, X-Requested-With, Content-Type, Accept'
-	);
-	next();
-});
-
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.get('/api', (req, res) => {
 	res.json({ message: 'Hello from server!' });
 });
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
+
 app.get('/checkout', (req, res) => {
 	const charge_ng_acct = async () => {
 		try {
