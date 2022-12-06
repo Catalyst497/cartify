@@ -68,7 +68,7 @@ function App() {
 					element={
 						<>
 							<CartPreview options={options} />
-							<Hero />
+							<Hero options={options} />
 							<Highlights isDesktop={isDesktop} />
 							<BeExclusive />
 							<Gallery options={options} />

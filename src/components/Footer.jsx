@@ -45,11 +45,11 @@ function Footer() {
 					<div className="font-bold text-[1.2rem] text-black mb-1">
 						Sign Up for the Latest News
 					</div>
-					<div className="flex gap-8 bg-white border-solid border-[#eee] border-[1px] rounded-[0.2rem]">
+					<div className="flex gap-8 bg-white shadow-sm rounded-[0.2rem] mt-2">
 						<ArrowRight />
 						<input
 							type="text"
-							className="bg-transparent"
+							className="bg-transparent outline-none"
 							placeholder="Enter Email"
 						/>
 					</div>

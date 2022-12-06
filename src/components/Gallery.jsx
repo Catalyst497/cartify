@@ -3,8 +3,10 @@ import { Cart } from 'react-bootstrap-icons';
 import { Plus, Minus } from 'react-feather';
 import gallery from '../utils/gallery';
 
+// A bunch classes fro some div later in the code.
 const activeCls =
 	'bg-[rgba(0,0,0,0.15)] rounded-[0.2rem] p-4 py-3 transition-colors';
+
 
 function Category({ txt, cls, key, category, setCategory }) {
 	const onClick = (txt) => setCategory(txt);
@@ -71,8 +73,8 @@ function Gallery({ options }) {
 			<div className="section-title- text-center font-bold text-[3rem] mt-[15rem] mb-6">
 				Shop By Category
 			</div>
-			<div className="category-select-">
-				<div className="gender flex justify-center items-center gap-4 mb-6">
+			<div className="category-select- ">
+				<div className="gender flex justify-center items-center gap-4 mb-6 py-4">
 					<div className="">
 						<button
 							className={gender === 'Female' && activeCls}
@@ -90,7 +92,8 @@ function Gallery({ options }) {
 						</button>
 					</div>
 				</div>
-				<div className="flex justify-center items-center flex-wrap gap-4 px-10">
+				<div className="a-line bg-gray-300 h-[1px] w-[35%] mx-auto"></div>
+				<div className="flex justify-center items-center flex-wrap gap-4 px-10 py-4">
 					<Category
 						txt={'T-shirt'}
 						category={category}
@@ -124,7 +127,7 @@ function Gallery({ options }) {
 					<Category txt={'All'} category={category} setCategory={setCategory} />
 				</div>
 			</div>
-			<div className="container- flex flex-wrap justify-center gap-4">
+			<div className="container- flex flex-wrap justify-center gap-4 mt-6">
 				{options.displayedGallery.map((item) => {
 					return (
 						<div
@@ -133,7 +136,7 @@ function Gallery({ options }) {
 						>
 							<div className="relative">
 								<img src={item.img} alt="" />
-								<div className="absolute flex flex-col items-center bottom-[10rem] right-4 rounded-[1rem] bg-[#00000022] w-8 p-2">
+								<div className="absolute flex flex-col items-center bottom-[10rem] right-4 rounded-[1rem] bg-[#00000011] md:bg-[#00000022] w-8 p-2">
 									<div
 										id="addquantity"
 										className="text-4"
@@ -161,8 +164,8 @@ function Gallery({ options }) {
 
 								<div
 									id="addtocart"
-									title='Add to Cart'
-									className="absolute flex items-center justify-center bottom-8 right-4 w-8 h-8 rounded-full bg-[#00000022]"
+									title="Add to Cart"
+									className="absolute flex items-center justify-center bottom-8 right-4 w-8 h-8 rounded-full bg-[#00000011] md:bg-[#00000022]"
 									onClick={(e) => addToCart(e, item)}
 								>
 									<Plus
