@@ -9,6 +9,19 @@ html {
 body {
     @apply font-jost text-[1rem];
 }
+/* .hero {
+    @apply before:opacity-50 before:-z-10 before:absolute before:inset-0 before:bg-[url(img/gallery/header-bg.png)];
+
+} */
+.hero::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -10;
+    opacity: .5;
+    inset: 0;
+    background-image: url(img/gallery/header-bg.png);
+}
 h1 {
     @apply text-[3rem];
 }

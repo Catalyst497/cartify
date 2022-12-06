@@ -3,7 +3,7 @@ import React from 'react';
 function Hero({options}) {
 	const {isDesktop} = options;
 	return (
-		<section className="h-[120vh] relative before:opacity-50 before:-z-10 before:absolute before:inset-0 before:bg-[url(img/gallery/header-bg.png)] pt-[6rem] md:pt-[12rem]">
+		<section className="hero h-[120vh] relative pt-[6rem] md:pt-[12rem]">
 			<div className="content- text-[2rem] mx-auto max-w-[90%] text-center">
 				{isDesktop ? (
 					<>
