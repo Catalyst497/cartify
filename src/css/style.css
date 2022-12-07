@@ -4,31 +4,37 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body {
-    @apply font-jost text-[1rem];
+	@apply font-jost text-[1rem];
 }
 /* .hero {
     @apply before:opacity-50 before:-z-10 before:absolute before:inset-0 before:bg-[url(img/gallery/header-bg.png)];
 
 } */
 .hero::before {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -10;
-    opacity: .5;
-    inset: 0;
-    background-image: url(img/gallery/header-bg.png);
+content: '';
+		display: block;
+		position: absolute;
+		z-index: -10;
+		opacity: 0.5;
+		inset: 0;
+        background: #00000022;
 }
-h1 {
-    @apply text-[3rem];
-}
-button {
-  outline: none;  
+@media (min-width: 768px) {
+	.hero::before {
+		background: url(img/gallery/header-bg.png);
+	}
 }
 
-[class ^= "swiper-button-"] {
-    color: black;
+h1 {
+	@apply text-[3rem];
+}
+button {
+	outline: none;
+}
+
+[class^='swiper-button-'] {
+	color: black;
 }
